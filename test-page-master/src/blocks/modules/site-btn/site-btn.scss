@@ -1,0 +1,44 @@
+.site-btn {
+    background-color: $site-green;
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 11px 11px;
+    color: #ffffff;
+    font-weight: 500;
+    letter-spacing: -0.8px;
+    min-width: 190px;
+    border-radius: 25px;
+    justify-content: center;
+    &:hover {
+        background-color: #228B22;
+    }
+    &--red {
+        background-color: $site-red;
+        @media(max-width: 620px) {
+            align-self: flex-start;
+            padding: 7px 15px 8px; 
+            font-size: 13px;
+            min-width: 160px;
+            margin-top: 20px;
+            margin-left: -50px;
+        }
+    }
+    &--red:hover {
+        background-color: $site-orange;
+    }
+    &__decor {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        margin-right: 5px;
+    }
+    &__decor--pen {
+        background: url(../../../img/svg/decor-pen.svg) center no-repeat;
+    }
+    &__decor--lock {
+        background: url(../../../img/svg/decor-lock.svg) center no-repeat;  
+    }
+    &__decor--search {
+        background: url(../../../img/svg/search-icon.svg) center no-repeat;  
+    }
+}

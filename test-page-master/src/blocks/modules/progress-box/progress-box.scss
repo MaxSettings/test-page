@@ -1,0 +1,52 @@
+.progress-box {
+    &__title {
+        font-size: 15px;
+        letter-spacing: -0.5px;
+        margin-bottom: 14px;
+        @media(max-width: 600px) {
+            font-size: 12px;
+        }
+    }
+    &__bar {
+        width: 137px;
+        height: 11px;
+        background-color: #ffffff;
+        border: 1px solid #c4c4c4;
+        display: inline-block;
+        margin-right: 20px;
+        position: relative;
+        @media(max-width: 600px) {
+            width: 97px;
+            margin-right: 10px;
+        }
+    }
+    &__fill {
+        position: absolute;
+        left: -1px;
+        top: -1px;
+        display: block; 
+        height: 11px;
+    }
+    &__fill--high {
+        background-color: $site-green;
+    }
+    &__fill--middle {
+        background-color: $site-orange;
+    }
+    &__fill--low {
+        background-color: $site-red;
+    }
+    &__percent {
+        font-weight: 700;
+        letter-spacing: -0.5px;
+    }
+    &__percent--high {
+        color: $site-green;
+    }
+    &__percent--middle {
+        color: $site-orange; 
+    }
+    &__percent--low {
+        color: $site-red;
+    }
+}

@@ -1,0 +1,24 @@
+.logo-box {
+    text-align: center;
+    &__logo {
+        width: 114px;
+        height: 66px;
+        object-fit: contain;
+        display: block;
+        margin-bottom: 8px;
+        @media(max-width: 620px) {
+            width: 84px;
+            height: 48px;
+        }
+    }
+    &__text {
+        color: #000;
+        display: block;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        line-height: 15px;
+        @media(max-width: 620px) {
+            font-size: 13px;
+        }
+    }
+}

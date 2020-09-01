@@ -1,0 +1,84 @@
+.footer{
+    background: $site-green;
+    padding: 60px 0 67px;
+    @media(max-width: 768px) {
+        padding: 23px 0 28px;
+    }
+    &__container{
+        @media(max-width: 768px) {
+            flex-direction: column;
+        }
+    }
+    &__links{
+        display: flex;
+        flex-direction: column;
+        padding-left: 27px;
+        @media(max-width: 768px) {
+            padding-left: 0;
+            margin-bottom: 40px;
+        }
+    }
+    &__links &__links-item:last-child {
+        margin-bottom: 0;
+    }
+    &__links-item{
+        color: #ffffff;
+        font-weight: 500;
+        letter-spacing: -0.5px;
+        text-decoration: underline;
+        margin-bottom: 14px;
+    }
+    &__links-item:hover,
+    &__contacts-link:hover {
+        color: #228B22;
+    }
+    &__socials {
+        @media(max-width: 768px) {
+            margin-bottom: 40px;
+        }
+    }
+    &__socials &__socials-link:last-child{
+        margin-right: 0;
+    }
+    &__socials-link{
+        display: inline-block;
+        width: 33px;
+        height: 33px;
+        border-radius: 50%;
+        background: center / contain no-repeat;
+        margin-right: 37px;
+        @media(max-width: 768px) {
+            margin-right: 16px;
+        }
+    }
+    &__socials-link--fb {
+        background-image: url(../../../img/svg/fb-icon.svg);
+    }
+    &__socials-link--insta {
+        background-image: url(../../../img/svg/insta-icon.svg);
+    }
+    &__socials-link--vk {
+        background-image: url(../../../img/svg/vk-icon.svg);
+    }
+    &__socials-link:hover {
+        transform: scale(1.2);
+    }
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        @media(max-width: 768px) {
+            text-align: left;
+        }
+    }
+    &__contacts-link {
+        color: #ffffff;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        margin-bottom: 20px;
+    }
+    &__contacts-copy {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 13px;
+    }
+}

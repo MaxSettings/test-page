@@ -1,0 +1,32 @@
+.progress-ring{
+    position: relative;
+    display: inline-block;
+    &__circle {
+        transform-origin: center;
+        transform: rotate(-45deg);
+    }
+    &__circle--small {
+        transform-origin: center;
+        transform: rotate(-45deg);  
+    }
+    &__percent {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 32px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        line-height: 28px;
+    }
+    &__percent--high {
+        color: $site-green;
+    }
+    &__percent--middle {
+        color: $site-orange;
+    }
+    &__percent--low {
+        color: $site-red;
+    }
+}
+

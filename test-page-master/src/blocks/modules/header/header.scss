@@ -1,0 +1,249 @@
+.header {
+    background: $site-green;
+    height: 48px;
+    padding: 8px 0 10px;
+    font-size: 14px;
+    @media(max-width: 920px) {
+        font-size: 13px;
+    }
+    &__container{
+        align-items: center;
+    }
+    &__left-wrapper {
+        max-width: 653px;
+        width: 100%;
+        padding-left: 30px;
+        align-items: center;
+        @media(max-width: 1050px){
+            max-width: 600px;
+        }
+        @media(max-width: 920px){
+            max-width: 505px;
+        }
+        @media(max-width: 768px){
+            display: none;
+            padding: 15px 0;
+        } 
+    }
+    &__info {
+        max-width: 226px;
+        width: 100%;
+        @media(max-width: 920px){
+            max-width: 205px;
+        }
+        @media(max-width: 768px){
+            flex-direction: column;
+            margin: 0 auto;
+        }
+    }
+    &__info-link {
+        color: #ffffff;
+        letter-spacing: -0.5px;
+        line-height: 15px;
+        position: relative;
+        @media(max-width: 768px){
+            text-align: center;
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+    }
+    &__info-link:hover{
+        text-decoration: underline;
+    }
+    &__info-link:before{
+        content: "";
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -20px;
+        @media(max-width: 768px){
+            display: none;
+        }
+    }
+    &__info-link--about:before {
+        content: url(../../../img/svg/info-icon.svg);
+    }
+    &__info-link--search:before {
+        content: url(../../../img/svg/search-icon.svg);
+    }
+    &__menu {
+        max-width: 340px;
+        width: 100%;
+        @media(max-width: 1050px){
+            max-width: 315px;
+        }
+        @media(max-width: 920px){
+            max-width: 260px;
+        }
+        @media(max-width: 768px){
+            margin: 0 auto;
+        }
+    }
+    &__menu-items {
+        @media(max-width: 768px){
+            flex-direction: column;
+        }
+    }
+    &__menu-item {
+        @media(max-width: 768px){
+            text-align: center;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+    }
+    &__menu-link{
+        color: #ffffff;
+        font-weight: 600;
+        letter-spacing: -0.5px;
+        line-height: 15px;
+        @media(max-width: 920px){
+            letter-spacing: -0.8px;
+        }
+    }
+    &__menu-link:hover{
+        text-decoration: underline;
+    }
+    &__right-wrapper {
+        max-width: 310px;
+        width: 100%;
+        align-items: center;
+        @media(max-width: 1050px){
+            max-width: 250px;
+        }
+        @media(max-width: 920px){
+            max-width: 200px;
+        }
+        @media(max-width: 768px){
+            max-width: 135px;
+        }
+        
+    }
+    &__activity {
+        max-width: 142px;
+        width: 100%;
+        @media(max-width: 1050px){
+            max-width: 120px;
+        }
+        @media(max-width: 920px){
+            max-width: 82px;
+        }
+    }
+    &__activity-link {
+        display: inline-block;
+        width: 26px;
+        height: 26px;
+        position: relative;
+        background: center / contain no-repeat;
+        @media(max-width: 920px){
+            width: 20px;
+            height: 20px;
+        }
+    }
+    &__activity-link:hover{
+        transform: scale(1.1);
+    }
+    &__activity-link--favorites {
+        background-image: url(../../../img/svg/star-icon.svg);
+    }
+
+    &__activity-link--messages {
+        background-image: url(../../../img/svg/message-icon.svg);
+    }
+    &__activity-link--notifications {
+        background-image: url(../../../img/svg/bell-icon.svg);
+    }
+    &__activity-link:after{
+        display: none;
+    }
+    &__activity-link--new:after{
+        display: block;
+        content: attr(data-count);
+        padding-top: 2px;
+        text-align: center;
+        color: #ffffff;
+        font-size: 10px;
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background-color: $site-red;
+        border-radius: 50%;
+        top: -5px;
+        right: -5px;
+        @media(max-width: 920px){
+            width: 13px;
+            height: 13px;
+            padding-top: 0;
+        }
+    }
+    &__user-box {
+        max-width: 110px;
+        width: 100%;
+        align-items: center;
+        @media(max-width: 920px){
+            max-width: 100px;
+        }
+        @media(max-width: 768px){
+            max-width: 29px;
+        }
+    }
+    &__user-profile {
+        display: inline-block;
+        width: 29px;
+        height: 29px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    &__user-photo {
+        object-fit: cover;
+        width: 29px;
+        height: 29px;
+    }
+    &__user-logout {
+        display: inline-block;
+        padding: 5px 15px;
+        color: #ffffff;
+        letter-spacing: -0.5px;
+        line-height: 15px;
+        border: 1px solid #ffffff;
+        border-radius: 15px;
+        @media(max-width: 920px){
+            font-size: 12px;
+            padding: 5px 10px;
+        }
+        @media(max-width: 768px){
+            display: none;
+            font-size: 0;
+            border: none;
+            background: url(../../../img/svg/logout-icon.svg) center / 22px 22px no-repeat;
+        }
+    }
+    &__user-logout:hover {
+        background-color: #228B22;
+    }
+    &__left-wrapper--active {
+        @media(max-width: 768px){
+            z-index: 1;
+            display: block;
+            position: absolute;
+            max-width: 100%;
+            top: 0;
+            left: 0;
+            background-color: #228B22;
+        }
+    }
+    &__user-logout--active {
+        @media(max-width: 768px){
+            display: block;
+            z-index: 2;
+            position: absolute;
+            right: 15px;
+            top: 11px;
+        }
+    }
+    &__user-logout--active:hover {
+        transform: scale(1.1);
+    }
+}
